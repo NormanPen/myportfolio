@@ -63,6 +63,10 @@ export default class DatePicker extends LightningElement {
             console.log('Ausgewähltes Datum:', selectedDate.toLocaleDateString('de-DE'));
         }
     }
+
+    resetToCurrentMonth() {
+        this.setCurrentMonth();
+    }
 }
 
 
