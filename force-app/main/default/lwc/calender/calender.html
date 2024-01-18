@@ -1,0 +1,39 @@
+<template>
+    <h2>D{currentDate}</h2>
+
+    <table>
+        <tbody>
+            <tr>
+                <th><input type="date" onchange={handleDateChange}></th>
+                <th>{Monday}</th>
+                <th>{Tuesday}</th>
+                <th>{Wednesday}</th>
+                <th>{Thursday}</th>
+                <th>{Friday}</th>
+                <th>{Saturday}</th>
+                <th>{Sunday}</th>
+            </tr>
+            <tr>
+                <td>Mitarbeiter 1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Mitarbeiter 2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <!-- Weitere Mitarbeiter können hier hinzugefügt werden -->
+        </tbody>
+    </table>
+</template>
