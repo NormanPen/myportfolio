@@ -1,0 +1,33 @@
+<template>
+  <div class="date-picker">
+      <button class="left" onclick={handlePrevMonth}>vorheriger Monat</button>
+      <p class="monat">{month}</p>
+      <button class="right" onclick={handleNextMonth}>nächster Monat</button>
+      <table>
+          <thead>
+              <tr>
+                  <th>Montag</th>
+                  <th>Dienstag</th>
+                  <th>Mittwoch</th>
+                  <th>Donnerstag</th>
+                  <th>Freitag</th>
+                  <th>Samstag</th>
+                  <th>Sonntag</th>
+              </tr>
+          </thead>
+          <tbody>
+              <template for:each={tableRows} for:item="row">
+                  <tr key={row.key}>
+                      <template for:each={row.cells} for:item="cell">
+                          <td key={cell.key} data-day={cell.value} onclick={handleDayClick}>
+                              {cell.value}
+                          </td>
+                      </template>
+                  </tr>
+              </template>
+          </tbody>
+      </table>
+      <button onclick={resetToCurrentMonth}>Aktuellen Monat anzeigen</button>
+  </div>
+</template>
+
