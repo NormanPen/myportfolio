@@ -30,13 +30,13 @@ export default class BmiCalculator extends LightningElement {
     this.bmiValue = Number(bmi.toFixed(2));
 
     if (this.bmiValue < 18.5) {
-      this.result = "Underweight";
+      this.result = "Untergewichtig";
     } else if (this.bmiValue >= 18.5 && this.bmiValue <= 25) {
-      this.result = "Healthy";
+      this.result = "Gesund";
     } else if (this.bmiValue > 25 && this.bmiValue <= 30) {
-      this.result = "Overweight";
+      this.result = "Übergewichtig";
     } else if (this.bmiValue > 30) {
-      this.result = "Obese";
+      this.result = "Fettleibig";
     }
 
     console.log("bmi", bmi);

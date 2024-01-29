@@ -3,19 +3,18 @@
 <template>
   <div class="app slds-var-p-around_medium">
     <div class="box">
-
-      <h1>BMI Calculator</h1>
+      <h1>BMI Rechner</h1>
       <template if:true={result}>
         <section>
-          <h2>Your BMI value is:</h2>
+          <h2>Ihr BMI-Wert beträgt:</h2>
           <div class="result-value">{bmiValue}</div>
-          <h2>So you are:</h2>
+          <h2>Ergebnis:</h2>
           <div class="result-value">{result}</div>
           <button
             class="slds-button slds-button_neutral slds-button_stretch custom-button slds-var-m-bottom_large slds-var-m-top_large"
             onclick={recalculate}
           >
-            Re-Calculaten
+            Neuberechnen
           </button>
         </section>
       </template>
@@ -27,14 +26,14 @@
       <form onsubmit={submitHandler}>
         <div class="slds-form-element slds-var-m-bottom_medium">
           <label class="slds-form-element__label" for="text-input-height">
-            Height(cm)</label
+            Größe(cm)</label
           >
           <div class="slds-form-element__control">
             <input
               type="number"
               id="text-input-height"
               min="0"
-              placeholder="Enter your height in cm"
+              placeholder="Geben Sie Ihre Größe in cm ein"
               required
               class="slds-input"
               name="height"
@@ -46,14 +45,14 @@
 
         <div class="slds-form-element slds-var-m-bottom_medium">
           <label class="slds-form-element__label" for="text-input-weight">
-            Weight(kg)</label
+            Gewicht(kg)</label
           >
           <div class="slds-form-element__control">
             <input
               type="number"
               id="text-input-weight"
               min="0"
-              placeholder="Enter your weight in kg"
+              placeholder="Geben Sie Ihr Gewicht in kg ein"
               required
               class="slds-input"
               name="weight"
@@ -65,34 +64,35 @@
         <button
           class="slds-button slds-button_neutral slds-button_stretch custom-button slds-var-m-bottom_large"
         >
-          Calculaten
+          Berechnen
         </button>
       </form>
 
       <div class="info-wrapper">
-        <h2>What your BMI means</h2>
+        <h2>Was Ihr BMI bedeutet</h2>
         <p class="slds-var-m-bottom_large">
-          Once you have measured your BMI, you can determine your healthy weight
-          range. If your BMI is:
+          Sobald Sie Ihren BMI gemessen haben, können Sie Ihren gesunden
+          Gewichtsbereich bestimmen. Wenn Ihr BMI beträgt:
         </p>
         <h3 class="slds-text-color_error slds-text-heading_medium">
-          Under 18.5
+          Unter 18.5
         </h3>
         <p class="slds-var-m-bottom_medium">
-          You are very underweight and possibly malnourished.
+          Sie sind stark untergewichtig und möglicherweise mangelernährt.
         </p>
         <h3 class="slds-text-color_success slds-text-heading_medium">
-          Between 18.5 to 24.9
+          Zwischen 18.5 und 24.9
         </h3>
         <p class="slds-var-m-bottom_medium">
-          You have a healthy weight range for young and middle-aged adults.
+          Ihr Gewicht liegt in einem gesunden Bereich für junge und mittelalte
+          Erwachsene.
         </p>
         <h3 class="slds-text-color_error slds-text-heading_medium">
-          25.0 to 29.9
+          25.0 und 29.9
         </h3>
-        <p class="slds-var-m-bottom_medium">You are overweigt.</p>
-        <h3 class="slds-text-color_error slds-text-heading_medium">Over 30</h3>
-        <p class="slds-var-m-bottom_medium">You are Obese.</p>
+        <p class="slds-var-m-bottom_medium">Sie sind übergewichtig.</p>
+        <h3 class="slds-text-color_error slds-text-heading_medium">Über 30</h3>
+        <p class="slds-var-m-bottom_medium">Sie sind fettleibig.</p>
       </div>
     </div>
   </div>

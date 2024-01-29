@@ -2,7 +2,7 @@
   --dark-blue: #0b0d21;
   --light-white: #fafafa;
   --light-blue: #4f7df9;
-  --light-pink: #e91e63;
+  --light-pink: #1aff81;
   --dull-blue: #1d1e33;
   --size-16: 16px;
   --size-14: 14px;
@@ -11,7 +11,7 @@
 
 .app {
   min-height: 100vh;
-  background-image: url(/sfsites/c/resource/BmiAppBackground);
+  background-image: url(/sfsites/c/resource/BmiAquillianceBackground);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -61,12 +61,11 @@ input {
   font-size: var(--size-16);
   padding: var(--size-12);
   background: var(--light-pink);
-  color: var(--light-white);
+  color: var(--dark-blue);
   border-color: var(--light-pink);
 }
 
-
 .result-value {
-    color: var(--light-blue);
-    font-size: 30px;
+  color: var(--light-blue);
+  font-size: 30px;
 }
